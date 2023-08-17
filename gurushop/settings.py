@@ -152,9 +152,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql', #postgres
         # 'ENGINE': 'django.db.backends.mysql', #mysql
-        'NAME': 'yoshoppa',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'NAME': 'YoShoppa$default',
+        'USER': 'YoShoppa',
+        'PASSWORD': 'yoshoppadb@2023',
         'HOST': 'YoShoppa.mysql.pythonanywhere-services.com',
         'PORT': '',
     }
