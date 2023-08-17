@@ -150,8 +150,8 @@ WSGI_APPLICATION = 'gurushop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql', #postgres
-        # 'ENGINE': 'django.db.backends.mysql', #mysql
+        # 'ENGINE': 'django.db.backends.postgresql', #postgres
+        'ENGINE': 'django.db.backends.mysql', #mysql
         'NAME': 'YoShoppa$default',
         'USER': 'YoShoppa',
         'PASSWORD': 'yoshoppadb@2023',
