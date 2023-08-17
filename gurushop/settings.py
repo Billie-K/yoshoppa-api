@@ -155,7 +155,7 @@ DATABASES = {
         'NAME': 'yoshoppa',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': '/Applications/MAMP/tmp/mysql/mysql.sock',
+        'HOST': 'YoShoppa.mysql.pythonanywhere-services.com',
         'PORT': '',
     }
 }
