@@ -192,7 +192,7 @@ class ProductSerializer(DynamicFieldsModelSerializer):
     class Meta:
         model = Product
         fields = ('id', 'name', 'slug', 'description', 'price', 'sales_price', 'sku', 'quantity', 'in_stock', 
-        'is_taxable', 'shipping_class_id', 'status', 'product_type', 'unit', 'height', 'width', 'length', 
+        'is_taxable', 'is_digital', 'shipping_class_id', 'status', 'product_type', 'unit', 'height', 'width', 'length', 
         'image', 'gallery', 'created_at', 'updated_at', 'max_price', 'min_price', 'type', 'product_type',
         'shop', 'categories', 'pivot')
         lookup_field = 'slug'
