@@ -702,7 +702,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 	objects = AccountManager()
 	
 	USERNAME_FIELD = 'username'
-	REQUIRED_FIELDS = ['name']
+	REQUIRED_FIELDS = ['name', 'email']
 
 	def __str__(self):
 		return self.username

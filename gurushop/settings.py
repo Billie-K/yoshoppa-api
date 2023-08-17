@@ -150,12 +150,13 @@ WSGI_APPLICATION = 'gurushop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dataguru',
-        'USER': 'postgres',
+        # 'ENGINE': 'django.db.backends.postgresql', #postgres
+        'ENGINE': 'django.db.backends.mysql', #mysql
+        'NAME': 'yoshoppa',
+        'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'HOST': '/Applications/MAMP/tmp/mysql/mysql.sock',
+        'PORT': '',
     }
 }
 
