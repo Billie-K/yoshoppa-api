@@ -231,7 +231,7 @@ CORS_ALLOW_CREDENTIALS = True
 #      'http://localhost:3003',
 #      'http://localhost:3000',
 # ]
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES':[
