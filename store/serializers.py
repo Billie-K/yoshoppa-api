@@ -293,7 +293,7 @@ class PermissionsSerializer(serializers.ModelSerializer):
 
 class UserSerializer(WritableNestedModelSerializer, serializers.ModelSerializer):
     address = UserAddressSerializer(many=True, required=False)
-    permissions = PermissionsSerializer(many=True, required=False)
+    # permissions = PermissionsSerializer(many=True, required=False)
     profile = ProfileSerializer(many=False, required=False)
     password = serializers.CharField(required=False, min_length=8, write_only=True)
 
