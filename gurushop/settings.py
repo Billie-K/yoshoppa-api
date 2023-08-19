@@ -227,10 +227,15 @@ LOGIN_URL = 'users:login'
 
 CORS_ALLOW_CREDENTIALS = True
 
-# CORS_ORIGIN_WHITELIST = [
-#      'http://localhost:3003',
-#      'http://localhost:3000',
-# ]
+CORS_ORIGIN_WHITELIST = [
+     'http://localhost:3003',
+     'http://localhost:3000',
+     'http://localhost:3004',
+     'http://vercel.com',
+     'https://vercel.com',
+     'http://yoshoppa.vercel.com',
+     'https://yoshoppa.vercel.com',
+]
 CORS_ORIGIN_ALLOW_ALL = True
 
 REST_FRAMEWORK = {
