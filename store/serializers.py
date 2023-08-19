@@ -251,7 +251,7 @@ class OptionsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Options
-        fields = ('seo', 'logo', 'useOtp', 'currency', 'taxClass', 'siteTitle', 'siteSubtitle', 
+        fields = ('seo', 'logo', 'useOtp', 'currency', 'taxClass', 'siteTitle', 'deliveryTime', 'siteSubtitle', 
         'shippingClass', 'contactDetails', 'minimumOrderAmount')
 
 

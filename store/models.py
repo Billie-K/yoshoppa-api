@@ -111,7 +111,7 @@ class Options(models.Model):
 	currency = models.CharField(max_length=200, blank=True, null=True)
 	taxClass = models.IntegerField()
 	siteTitle = models.CharField(max_length=200)
-	# deliveryTime = models.ManyToManyField(DeliveryTime)
+	deliveryTime = models.ManyToManyField(DeliveryTime)
 	siteSubtitle = models.CharField(max_length=200, null=True, blank=True)
 	shippingClass = models.IntegerField()
 	contactDetails = models.ForeignKey(ContactDetails, on_delete=models.CASCADE)
