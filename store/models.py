@@ -104,24 +104,24 @@ class ContactDetails(models.Model):
 		return self.contact
 
 
-# class Options(models.Model):
-# 	seo = models.ForeignKey(Seo, on_delete=models.CASCADE)
-# 	logo = models.ForeignKey(Logo, on_delete=models.CASCADE)
-# 	useOtp = models.BooleanField(default=False)
-# 	currency = models.CharField(max_length=200, blank=True, null=True)
-# 	taxClass = models.IntegerField()
-# 	siteTitle = models.CharField(max_length=200)
-# 	deliveryTime = models.ManyToManyField(DeliveryTime)
-# 	siteSubtitle = models.CharField(max_length=200, null=True, blank=True)
-# 	shippingClass = models.IntegerField()
-# 	contactDetails = models.ForeignKey(ContactDetails, on_delete=models.CASCADE)
-# 	minimumOrderAmount = models.IntegerField()
+class Options(models.Model):
+	seo = models.ForeignKey(Seo, on_delete=models.CASCADE)
+	logo = models.ForeignKey(Logo, on_delete=models.CASCADE)
+	useOtp = models.BooleanField(default=False)
+	currency = models.CharField(max_length=200, blank=True, null=True)
+	taxClass = models.IntegerField()
+	siteTitle = models.CharField(max_length=200)
+	deliveryTime = models.ManyToManyField(DeliveryTime)
+	siteSubtitle = models.CharField(max_length=200, null=True, blank=True)
+	shippingClass = models.IntegerField()
+	contactDetails = models.ForeignKey(ContactDetails, on_delete=models.CASCADE)
+	minimumOrderAmount = models.IntegerField()
 
-# 	class Meta:
-# 		verbose_name_plural = 'Options'
+	class Meta:
+		verbose_name_plural = 'Options'
 
-# 	def __str__(self):
-# 		return str(self.id)
+	def __str__(self):
+		return str(self.id)
 
 
 class Settings(models.Model):
