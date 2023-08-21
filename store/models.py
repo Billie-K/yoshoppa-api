@@ -14,6 +14,7 @@ from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.utils.crypto import get_random_string
+from django.utils.text import slugify
 
 # Create your models here.
 class Customer(models.Model):
@@ -497,7 +498,7 @@ class Variation(models.Model):
 
 class Product(models.Model):
 	name = models.CharField(max_length=200)
-	slug = models.CharField(max_length=200,blank=True, null=True)
+	slug = models.SlugField(max_length=200, null=True, unique=True, editable=False)
 	description = models.TextField(blank=True, null=True)
 	price = models.FloatField(blank=True, null=True)
 	sales_price = models.FloatField(blank=True, null=True)
@@ -552,6 +553,12 @@ class Product(models.Model):
 
 	def __str__(self):
 		return self.name
+	
+	def save(self, *args, **kwargs):
+		if not self.slug:
+			value = self.name
+			self.slug = slugify(value, allow_unicode=True)
+			super().save(*args, **kwargs)
 
 	class Meta:
 		ordering = ['pk']
