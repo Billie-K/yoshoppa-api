@@ -533,7 +533,7 @@ class Product(models.Model):
 	height = models.FloatField(null=True, blank=True)
 	width = models.FloatField(null=True, blank=True)
 	length = models.FloatField(null=True, blank=True)
-	image = models.ForeignKey(ProductImage, null=True, blank=True, on_delete=models.CASCADE)
+	image = models.ForeignKey(ProductImage, null=True, on_delete=models.CASCADE)
 	gallery = models.ForeignKey(ProductGallery, on_delete=models.CASCADE, blank=True, null=True)
 	created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
 	updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
