@@ -503,7 +503,7 @@ class Product(models.Model):
 	price = models.FloatField(blank=True, null=True)
 	sales_price = models.FloatField(blank=True, null=True)
 	sku = models.CharField(max_length=200, null=True, blank=True)
-	quantity = models.IntegerField(blank=True, null=True)
+	quantity = models.IntegerField(null=True)
 	in_stock = models.BooleanField(blank=True, null=True, default=True)
 	is_taxable = models.BooleanField(null=True, blank=True, default=False)
 	is_digital = models.BooleanField(null=True, blank=True, default=False)
