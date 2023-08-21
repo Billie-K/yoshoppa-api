@@ -154,7 +154,7 @@ class ChildrenSerializer(serializers.ModelSerializer):
         'typeId', 'created_at', 'updated_at', 'deleted_at','products_count')
 
 class CategoriesSerializer(serializers.ModelSerializer):
-    image = ProductImageSerializer(many=True)
+    image = ProductImageSerializer(many=False)
     parent = ChildrenSerializer(many=False)
     children = ChildrenSerializer(many=True)
     type = TypesSerializer(many=False)

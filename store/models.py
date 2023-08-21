@@ -432,7 +432,7 @@ class Categories(models.Model):
 	name = models.CharField(max_length=200)
 	slug = models.SlugField()
 	icon = models.CharField(max_length=20,null=True, blank=True)
-	image = models.ManyToManyField(ProductImage, blank=True)
+	image = models.ForeignKey(ProductImage, blank=True, null=True, on_delete=models.CASCADE)
 	details = models.TextField(null=True, blank=True)
 	parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE)
 	typeId = models.IntegerField(null=True, blank=True)
