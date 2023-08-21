@@ -177,7 +177,7 @@ class TypeSettings(models.Model):
 	productCard = models.CharField(max_length=20, choices=CARD_CHOICES, default=ARGON)
 
 	def __str__(self):
-		return self.layoutType
+		return self.layoutType + self.productCard
 
 	class Meta:
 		verbose_name_plural = 'TypeSettings'
@@ -500,7 +500,7 @@ class Product(models.Model):
 	name = models.CharField(max_length=200)
 	slug = models.SlugField(max_length=200, null=True, unique=True, editable=False)
 	description = models.TextField(blank=True, null=True)
-	price = models.FloatField(blank=True, null=True)
+	price = models.FloatField(null=True)
 	sales_price = models.FloatField(blank=True, null=True)
 	sku = models.CharField(max_length=200, null=True, blank=True)
 	quantity = models.IntegerField(null=True)
