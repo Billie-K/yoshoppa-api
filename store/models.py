@@ -177,7 +177,7 @@ class TypeSettings(models.Model):
 	productCard = models.CharField(max_length=20, choices=CARD_CHOICES, default=ARGON)
 
 	def __str__(self):
-		return self.layoutType + self.productCard
+		return self.layoutType + ' ' + self.productCard
 
 	class Meta:
 		verbose_name_plural = 'TypeSettings'
